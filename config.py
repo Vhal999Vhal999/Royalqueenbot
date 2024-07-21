@@ -19,10 +19,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID",-1002201746178))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID",))
 
 # Get this value from @StringFatherBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7226851491"))
+OWNER_ID = int(getenv("OWNER_ID", ""))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -39,8 +39,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/unlimited_feelings_xD")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TG_Name_Chat")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/royalmusibotl")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/royalmusicboto")
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
