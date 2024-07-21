@@ -7,8 +7,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", "25392624"))
-API_HASH = getenv("API_HASH", "c9208c6e73e4d48a7a03c3ee296995be")
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -19,7 +19,7 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID",-1002132108601))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID",-1002201746178))
 
 # Get this value from @StringFatherBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", ""))
@@ -32,15 +32,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Yewsdhi/Royalqueen",
+    "https://github.com/Vhal999Vhal999/Royalqueenbot",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/royalmusibotl")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/royalmusicboto")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/unlimited_feelings_xD")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TG_Name_Chat")
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
