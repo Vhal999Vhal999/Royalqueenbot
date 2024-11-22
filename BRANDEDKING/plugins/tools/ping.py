@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from BRANDEDKING import app
-from BRANDEDKING.core.call import BRANDED
-from BRANDEDKING.utils import bot_sys_stats
-from BRANDEDKING.utils.decorators.language import language
-from BRANDEDKING.utils.inline import supp_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.core.call import Hotty
+from BrandrdXMusic.utils import bot_sys_stats
+from BrandrdXMusic.utils.decorators.language import language
+from BrandrdXMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await BRANDED.ping()
+    pytgping = await Hotty.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(

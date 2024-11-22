@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from BRANDEDKING import app
-from BRANDEDKING.misc import db
-from BRANDEDKING.utils import BRANDEDBin, get_channeplayCB, seconds_to_min
-from BRANDEDKING.utils.database import get_cmode, is_active_chat, is_music_playing
-from BRANDEDKING.utils.decorators.language import language, languageCB
-from BRANDEDKING.utils.inline import queue_back_markup, queue_markup
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import db
+from BrandrdXMusic.utils import HottyBin, get_channeplayCB, seconds_to_min
+from BrandrdXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from BrandrdXMusic.utils.decorators.language import language, languageCB
+from BrandrdXMusic.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
@@ -156,7 +156,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     basic[videoid] = False
     buttons = queue_back_markup(_, what)
     med = InputMediaPhoto(
-        media="https://telegra.ph//file/6f7d35131f69951c74ee5.jpg",
+        media="https://te.legra.ph/file/ba39a10ba20736f42f202.jpg",
         caption=_["queue_1"],
     )
     await CallbackQuery.edit_message_media(media=med)
@@ -176,7 +176,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
         if "✨" in msg:
             msg = msg.replace("✨", "")
-        link = await TGNBin(msg)
+        link = await HottyBin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:

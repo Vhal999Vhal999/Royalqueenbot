@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.types import Message
 from unidecode import unidecode
 
-from BRANDEDKING import app
-from BRANDEDKING.misc import SUDOERS
-from BRANDEDKING.utils.database import (
+from BrandrdXMusic import app
+from config import OWNER_ID
+from BrandrdXMusic.utils.database import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,
@@ -12,7 +12,7 @@ from BRANDEDKING.utils.database import (
 )
 
 
-@app.on_message(filters.command(["activevc", "activevoice"]) & SUDOERS)
+@app.on_message(filters.command(["activevc", "activevoice"]) & filters.user(OWNER_ID))
 async def activevc(_, message: Message):
     mystic = await message.reply_text("» ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ʟɪsᴛ...")
     served_chats = await get_active_chats()
@@ -44,7 +44,7 @@ async def activevc(_, message: Message):
         )
 
 
-@app.on_message(filters.command(["activev", "activevideo"]) & SUDOERS)
+@app.on_message(filters.command(["activev", "activevideo"]) & filters.user(OWNER_ID))
 async def activevi_(_, message: Message):
     mystic = await message.reply_text("» ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛs ʟɪsᴛ...")
     served_chats = await get_active_video_chats()

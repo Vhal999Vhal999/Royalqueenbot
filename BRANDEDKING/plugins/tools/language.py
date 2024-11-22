@@ -2,9 +2,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from BRANDEDKING import app
-from BRANDEDKING.utils.database import get_lang, set_lang
-from BRANDEDKING.utils.decorators import ActualAdminCB, language, languageCB
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.database import get_lang, set_lang
+from BrandrdXMusic.utils.decorators import (ActualAdminCB, language, languageCB)
 from config import BANNED_USERS
 from strings import get_string, languages_present
 
@@ -37,7 +37,7 @@ def lanuages_keyboard(_):
 async def langs_command(client, message: Message, _):
     keyboard = lanuages_keyboard(_)
     await message.reply_text(
-        _["lang_1"],
+        _["lang_1"].format(message.chat.title, message.chat.id),
         reply_markup=keyboard,
     )
 
